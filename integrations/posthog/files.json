@@ -1,0 +1,4 @@
+[
+  "src/integrations/posthog/provider.tsx",
+  "src/routes/demo/posthog.tsx"
+]

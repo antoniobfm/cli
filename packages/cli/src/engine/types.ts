@@ -12,6 +12,7 @@ export const CategorySchema = z.enum([
   'deploy',
   'tooling',
   'monitoring',
+  'analytics',
   'api',
   'i18n',
   'cms',

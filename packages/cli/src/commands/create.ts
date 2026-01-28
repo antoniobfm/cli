@@ -94,6 +94,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   api: 'API',
   i18n: 'Internationalization',
   cms: 'CMS',
+  analytics: 'Analytics',
   other: 'Other',
 }
 
@@ -108,6 +109,7 @@ const CATEGORY_ORDER = [
   'tooling',
   'i18n',
   'cms',
+  'analytics',
   'other',
 ]
 
@@ -383,7 +385,7 @@ export async function runCreate(
     const fullPath = resolve(targetDir, filePath)
     const dir = resolve(fullPath, '..')
     mkdirSync(dir, { recursive: true })
-    
+
     // Handle binary files (base64 encoded with prefix)
     if (content.startsWith(BINARY_PREFIX)) {
       const base64Data = content.slice(BINARY_PREFIX.length)

@@ -42,6 +42,7 @@ npx @tanstack/cli create my-app --integrations tanstack-query,clerk,drizzle
 | API | tRPC, oRPC |
 | Monitoring | Sentry |
 | i18n | Paraglide |
+| Analytics | PostHog |
 | CMS | Strapi |
 
 ## License

@@ -1,0 +1,49 @@
+{
+  "name": "PostHog",
+  "description": "Product analytics, session replay, and feature flags",
+  "type": "integration",
+  "phase": "integration",
+  "category": "analytics",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://posthog.com",
+  "partnerId": "posthog",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/posthog",
+      "name": "PostHog",
+      "icon": "BarChart",
+      "path": "src/routes/demo/posthog.tsx",
+      "jsName": "PostHogDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "PostHogProvider",
+      "path": "src/integrations/posthog/provider.tsx"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "VITE_POSTHOG_KEY",
+      "description": "Your PostHog project API key",
+      "required": true,
+      "example": "phc_xxx"
+    },
+    {
+      "name": "VITE_POSTHOG_HOST",
+      "description": "PostHog API host (for self-hosted or EU cloud)",
+      "required": false,
+      "example": "https://us.i.posthog.com"
+    }
+  ],
+
+  "gitignorePatterns": []
+}
